@@ -1,0 +1,38 @@
+{
+  "name": "Dividend Dark Theme",
+  "dataColors": [
+    "#18B2A1",
+    "#29C3D1",
+    "#00A5BF",
+    "#36BFAA",
+    "#72E0D9",
+    "#00BFA5"
+  ],
+  "background": "#171A1D",
+  "foreground": "#FFFFFF",
+  "tableAccent": "#18B2A1",
+  "visualStyles": {
+    "*": {
+      "*": {
+        "title": [
+          {
+            "color": {
+              "solid": {
+                "color": "#FFFFFF"
+              }
+            }
+          }
+        ],
+        "labels": [
+          {
+            "color": {
+              "solid": {
+                "color": "#FFFFFF"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

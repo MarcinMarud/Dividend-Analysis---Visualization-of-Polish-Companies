@@ -1,0 +1,74 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "stock_data company_year_performance",
+          "nodeLineageTag": "fd4e07fd-dbfa-459b-966d-046f9257d1d1",
+          "size": {
+            "height": 236,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 284,
+            "y": 12
+          },
+          "nodeIndex": "stock_data dividend_consistency",
+          "nodeLineageTag": "4a8a9700-ac99-4d82-81d3-e25636548259",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 568,
+            "y": 0
+          },
+          "nodeIndex": "stock_data sector_performance",
+          "nodeLineageTag": "4dab4762-440e-4f8c-9744-dd13ebb4ef5a",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 852,
+            "y": 12
+          },
+          "nodeIndex": "stock_data top_dividend_payers",
+          "nodeLineageTag": "599f1d32-ba7e-46b9-a536-876cdafbda33",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 3
+        }
+      ],
+      "name": "Wszystkie tabele",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Wszystkie tabele",
+  "defaultDiagram": "Wszystkie tabele"
+}

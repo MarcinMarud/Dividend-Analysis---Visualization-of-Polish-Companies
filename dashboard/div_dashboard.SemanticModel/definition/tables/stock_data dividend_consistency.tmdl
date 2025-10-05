@@ -1,0 +1,61 @@
+table 'stock_data dividend_consistency'
+	lineageTag: 4a8a9700-ac99-4d82-81d3-e25636548259
+
+	column ticker
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: f8c61e38-e7f0-466a-a499-19dd83c9f634
+		summarizeBy: none
+		sourceColumn: ticker
+
+		annotation SummarizationSetBy = Automatic
+
+	column company_name
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 2e764a35-a919-47a8-b0ed-a92183b1adee
+		summarizeBy: none
+		sourceColumn: company_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column sector
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 3dad5cd4-1e4d-4fdc-b50a-805e8cdaecef
+		summarizeBy: none
+		sourceColumn: sector
+
+		annotation SummarizationSetBy = Automatic
+
+	column dividend_count
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: e2a54766-31c3-49ea-9ef7-cc5de6daa1b3
+		summarizeBy: sum
+		sourceColumn: dividend_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column longest_streak
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 439553d9-d73b-427a-864c-307355fdb7da
+		summarizeBy: sum
+		sourceColumn: longest_streak
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'stock_data dividend_consistency' = m
+		mode: directQuery
+		source =
+				let
+				    Źródło = PostgreSQL.Database("localhost", "polish_dividends"),
+				    stock_data_dividend_consistency = Źródło{[Schema="stock_data",Item="dividend_consistency"]}[Data]
+				in
+				    stock_data_dividend_consistency
+
+	annotation PBI_ResultType = Table
+

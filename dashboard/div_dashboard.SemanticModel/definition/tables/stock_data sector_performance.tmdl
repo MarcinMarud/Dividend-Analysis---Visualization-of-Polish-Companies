@@ -1,0 +1,78 @@
+table 'stock_data sector_performance'
+	lineageTag: 4dab4762-440e-4f8c-9744-dd13ebb4ef5a
+
+	column sector
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 187fc1b7-214d-419b-a702-09778fba09e3
+		summarizeBy: none
+		sourceColumn: sector
+
+		annotation SummarizationSetBy = Automatic
+
+	column year
+		dataType: double
+		formatString: 0
+		sourceProviderType: decimal
+		lineageTag: d2d6a8a5-dc63-4947-b115-bbc864a26701
+		summarizeBy: sum
+		sourceColumn: year
+
+		annotation SummarizationSetBy = Automatic
+
+	column average_sector_dividend_yield
+		dataType: double
+		sourceProviderType: decimal
+		lineageTag: b5005a1c-bbd8-4b1d-a412-2608ddd0003a
+		summarizeBy: sum
+		sourceColumn: average_sector_dividend_yield
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column total_volume
+		dataType: double
+		sourceProviderType: decimal
+		lineageTag: cde5d45e-6e75-4f50-b79f-4886ad473539
+		summarizeBy: sum
+		sourceColumn: total_volume
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column yoy_sector_dividend_yield_growth
+		dataType: double
+		formatString: " #,##0.0\%"
+		sourceProviderType: decimal
+		lineageTag: 0a778267-9f09-4888-af86-f6eb3beed6d4
+		summarizeBy: sum
+		sourceColumn: yoy_sector_dividend_yield_growth
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	column yoy_sector_dividend_volume_growth
+		dataType: double
+		sourceProviderType: decimal
+		lineageTag: 726527c1-08aa-4f66-b5c0-5ef1dd57767f
+		summarizeBy: sum
+		sourceColumn: yoy_sector_dividend_volume_growth
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'stock_data sector_performance' = m
+		mode: directQuery
+		source =
+				let
+				    Źródło = PostgreSQL.Database("localhost", "polish_dividends"),
+				    stock_data_sector_performance = Źródło{[Schema="stock_data",Item="sector_performance"]}[Data]
+				in
+				    stock_data_sector_performance
+
+	annotation PBI_ResultType = Table
+

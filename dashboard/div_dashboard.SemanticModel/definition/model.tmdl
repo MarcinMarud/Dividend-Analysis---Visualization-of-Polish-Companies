@@ -1,0 +1,21 @@
+model Model
+	culture: pl-PL
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: pl-PL
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DevMode"]
+
+annotation PBI_QueryOrder = ["stock_data company_year_performance","stock_data dividend_consistency","stock_data sector_performance","stock_data top_dividend_payers"]
+
+ref table 'stock_data company_year_performance'
+ref table 'stock_data dividend_consistency'
+ref table 'stock_data sector_performance'
+ref table 'stock_data top_dividend_payers'
+
+ref cultureInfo pl-PL
+

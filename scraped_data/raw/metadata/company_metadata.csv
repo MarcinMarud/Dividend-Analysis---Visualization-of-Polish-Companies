@@ -1,0 +1,45 @@
+ticker,company_name,sector,industry,scrape_date
+PKO.WA,PKO Bank Polski,Banking,Banks,2025-10-05T16:41:58.583514
+PEO.WA,Bank Pekao,Banking,Banks,2025-10-05T16:42:03.858505
+SPL.WA,Santander Bank Polska,Banking,Banks,2025-10-05T16:42:06.743424
+MBK.WA,mBank,Banking,Banks,2025-10-05T16:42:09.536818
+ING.WA,ING Bank Śląski,Banking,Banks,2025-10-05T16:42:12.340135
+MIL.WA,Bank Millennium,Banking,Banks,2025-10-05T16:42:15.393367
+ALR.WA,Alior Bank,Banking,Banks,2025-10-05T16:42:18.120374
+BHW.WA,Bank Handlowy,Banking,Banks,2025-10-05T16:42:20.812671
+BNP.WA,BNP Paribas Bank Polska,Banking,Banks,2025-10-05T16:42:23.721988
+PKN.WA,PKN Orlen,Energy,Oil & Gas,2025-10-05T16:42:26.445998
+PGE.WA,PGE Polska Grupa Energetyczna,Utilities,Electric Utilities,2025-10-05T16:42:29.426108
+TPE.WA,TAURON Polska Energia,Utilities,Electric Utilities,2025-10-05T16:42:32.077492
+ENG.WA,Energa,Utilities,Electric Utilities,2025-10-05T16:42:34.897630
+ENA.WA,ENEA,Utilities,Electric Utilities,2025-10-05T16:42:37.645569
+PZU.WA,PZU,Insurance,Insurance,2025-10-05T16:42:40.676907
+KGH.WA,KGHM Polska Miedź,Materials,Industrial Metals & Mining,2025-10-05T16:42:43.501121
+JSW.WA,Jastrzębska Spółka Węglowa,Energy,Coal,2025-10-05T16:42:46.479809
+ATT.WA,Grupa Azoty,Materials,Chemicals,2025-10-05T16:42:49.227993
+LWB.WA,Lubelski Węgiel Bogdanka,Energy,Coal,2025-10-05T16:42:52.052073
+CDR.WA,CD Projekt,Technology,Software & Games,2025-10-05T16:42:54.861991
+ACP.WA,Asseco Poland,Technology,Software,2025-10-05T16:42:57.777390
+OPL.WA,Orange Polska,Telecommunications,Telecom Services,2025-10-05T16:43:00.890384
+CPS.WA,Cyfrowy Polsat,Telecommunications,Media & Broadcasting,2025-10-05T16:43:03.769237
+ASE.WA,Asseco South Eastern Europe,Technology,Software,2025-10-05T16:43:06.587381
+DNP.WA,Dino Polska,Consumer Staples,Food Retail,2025-10-05T16:43:09.296585
+ALE.WA,Allegro.eu,Consumer Discretionary,E-commerce,2025-10-05T16:43:11.988316
+LPP.WA,LPP,Consumer Discretionary,Apparel Retail,2025-10-05T16:43:14.525582
+CCC.WA,CCC,Consumer Discretionary,Footwear Retail,2025-10-05T16:43:17.492193
+ZAB.WA,Żabka Group,Consumer Staples,Convenience Stores,2025-10-05T16:43:20.253450
+BDX.WA,Budimex,Industrials,Construction,2025-10-05T16:43:22.879512
+DOM.WA,Dom Development,Real Estate,Real Estate Development,2025-10-05T16:43:25.671199
+ECH.WA,Echo Investment,Real Estate,Real Estate Development,2025-10-05T16:43:28.582855
+1AT.WA,Atal,Real Estate,Real Estate Development,2025-10-05T16:43:31.419646
+KTY.WA,Grupa Kęty,Materials,Aluminum,2025-10-05T16:43:34.253495
+CAR.WA,Inter Cars,Consumer Discretionary,Auto Parts,2025-10-05T16:43:37.191295
+KRU.WA,KRUK,Financial Services,Debt Collection,2025-10-05T16:43:40.001741
+WLT.WA,Wielton,Industrials,Commercial Vehicles,2025-10-05T16:43:42.683326
+BFT.WA,Benefit Systems,Consumer Discretionary,Leisure Services,2025-10-05T16:43:45.735169
+XTB.WA,XTB,Financial Services,Online Brokerage,2025-10-05T16:43:48.428275
+DIA.WA,Diagnostyka,Healthcare,Medical Diagnostics,2025-10-05T16:43:51.386722
+KER.WA,Kernel Holding,Consumer Staples,Food Processing,2025-10-05T16:43:53.938524
+PEP.WA,Polenergia,Utilities,Renewable Energy,2025-10-05T16:43:56.773863
+EAT.WA,AmRest Holdings,Consumer Discretionary,Restaurants,2025-10-05T16:43:59.521441
+NEU.WA,NEUCA,Consumer Staples,Food Distribution,2025-10-05T16:44:02.388157

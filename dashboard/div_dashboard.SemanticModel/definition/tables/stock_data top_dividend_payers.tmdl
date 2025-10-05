@@ -1,0 +1,63 @@
+table 'stock_data top_dividend_payers'
+	lineageTag: 599f1d32-ba7e-46b9-a536-876cdafbda33
+
+	column ticker
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 3c256141-7959-4117-92f0-cfeb0e4f175b
+		summarizeBy: none
+		sourceColumn: ticker
+
+		annotation SummarizationSetBy = Automatic
+
+	column company_name
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 8fa852ee-5ac5-4f09-8177-b4ae6cc29206
+		summarizeBy: none
+		sourceColumn: company_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column sector
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: c2395d15-f70c-4cdb-96f0-2d5bfbd4654a
+		summarizeBy: none
+		sourceColumn: sector
+
+		annotation SummarizationSetBy = Automatic
+
+	column avg_overall_dividend_yield
+		dataType: double
+		formatString: " #,##0.00\%"
+		sourceProviderType: decimal
+		lineageTag: bc9bb233-21d5-4024-b35e-707afb04e187
+		summarizeBy: sum
+		sourceColumn: avg_overall_dividend_yield
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	column rnk
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 5a38386d-a7c1-4dca-87b7-3ffbef200cbf
+		summarizeBy: sum
+		sourceColumn: rnk
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'stock_data top_dividend_payers' = m
+		mode: directQuery
+		source =
+				let
+				    Źródło = PostgreSQL.Database("localhost", "polish_dividends"),
+				    stock_data_top_dividend_payers = Źródło{[Schema="stock_data",Item="top_dividend_payers"]}[Data]
+				in
+				    stock_data_top_dividend_payers
+
+	annotation PBI_ResultType = Table
+

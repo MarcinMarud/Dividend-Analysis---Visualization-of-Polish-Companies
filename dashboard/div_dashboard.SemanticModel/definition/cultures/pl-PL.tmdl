@@ -1,0 +1,95 @@
+cultureInfo pl-PL
+
+	linguisticMetadata =
+			{
+			  "Version": "2.0.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "stock_data_sector_performance.sector": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "stock_data sector_performance",
+			          "ConceptualProperty": "sector"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "SECTOR PERFORMANCE": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "stock_data_dividend_consistency.sector": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "stock_data dividend_consistency",
+			          "ConceptualProperty": "sector"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "SECTOR": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "stock_data_dividend_consistency.company_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "stock_data dividend_consistency",
+			          "ConceptualProperty": "company_name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "COMPANY NAME": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "stock_data_company_year_performance.sector": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "stock_data company_year_performance",
+			          "ConceptualProperty": "sector"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "SECTOR RELIABILITY": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    }
+			  }
+			}
+		contentType: json
+

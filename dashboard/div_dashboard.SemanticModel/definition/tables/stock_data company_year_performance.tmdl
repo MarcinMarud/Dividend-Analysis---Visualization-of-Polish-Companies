@@ -1,0 +1,89 @@
+table 'stock_data company_year_performance'
+	lineageTag: fd4e07fd-dbfa-459b-966d-046f9257d1d1
+
+	measure 'Dividend Payers %' = ```
+			
+			DIVIDE(
+			    COUNTROWS(FILTER('stock_data company_year_performance', 'stock_data company_year_performance'[yoy_dividend_yield] > 0)),
+			    DISTINCTCOUNT('stock_data company_year_performance'[ticker])
+			)
+			
+			```
+		lineageTag: 10f5d4e6-81b3-4f1d-aadc-b76a542bf861
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column year
+		dataType: double
+		formatString: 0
+		sourceProviderType: decimal
+		lineageTag: 3578ebdc-0b64-4b42-bd2c-9eb75dadcb97
+		summarizeBy: sum
+		sourceColumn: year
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column ticker
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 23aa19d9-7c86-4eac-af93-14c2899ec59b
+		summarizeBy: none
+		sourceColumn: ticker
+
+		annotation SummarizationSetBy = Automatic
+
+	column company_name
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: d6991ce8-ad28-4973-bd95-22e059e60b48
+		summarizeBy: none
+		sourceColumn: company_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column sector
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: f1c9aa5b-bb8b-465a-b18b-b59f65ded899
+		summarizeBy: none
+		sourceColumn: sector
+
+		annotation SummarizationSetBy = Automatic
+
+	column yoy_dividend_yield
+		dataType: double
+		formatString: #,##0.00\%
+		sourceProviderType: decimal
+		lineageTag: 5813558a-d645-4508-861a-6f54f855bc09
+		summarizeBy: sum
+		sourceColumn: yoy_dividend_yield
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	column yoy_dividend_growth
+		dataType: double
+		formatString: " #,##0.00\%"
+		sourceProviderType: decimal
+		lineageTag: a7a1874f-0be5-4c2e-bc94-d73c88e929cf
+		summarizeBy: sum
+		sourceColumn: yoy_dividend_growth
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	partition 'stock_data company_year_performance' = m
+		mode: directQuery
+		source =
+				let
+				    Źródło = PostgreSQL.Database("localhost", "polish_dividends"),
+				    stock_data_company_year_performance = Źródło{[Schema="stock_data",Item="company_year_performance"]}[Data]
+				in
+				    stock_data_company_year_performance
+
+	annotation PBI_ResultType = Table
+
