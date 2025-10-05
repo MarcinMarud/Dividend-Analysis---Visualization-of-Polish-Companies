@@ -71,7 +71,7 @@ Interactive dashboards created in Power BI using **DirectQuery** for real-time u
 
 ### 🔹 Dashboard 2 — Dividend Consistency & Reliability
   
-<img width="1305" height="721" alt="obraz" src="https://github.com/user-attachments/assets/3fe04085-8367-4cbf-9c6b-d4ecfbe4af65" />
+<img width="1304" height="729" alt="obraz" src="https://github.com/user-attachments/assets/0d50f91d-f986-4cf0-ba99-bbc13f817fd6" />
 
 
 **Contains:**  
